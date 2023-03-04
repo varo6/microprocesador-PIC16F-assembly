@@ -12,9 +12,9 @@
 inicio
     
 	BSF		STATUS, RP0      ; Select Bank 1, poniendo RP0 a 1
-    CLRF 	TRISC            ;Vaciar TRISC para poner el PORTC en modo entrada
+    CLRF 	TRISC            ;Vaciar TRISC para poner el PORTC en modo salida
     movlw 	0xFF             ;Paso el bit 1 al acumulador
-    movwf 	TRISB            ;Del acumulador al PORTB para que sea modo salida
+    movwf 	TRISB            ;Del acumulador al PORTB para que sea modo entrada
     BCF   	STATUS, RP0      ;Select Bank 0 (RP0 en 0)
 
 main    
