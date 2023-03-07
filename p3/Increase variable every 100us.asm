@@ -15,7 +15,7 @@
 	;Importante: No es lo mismo incrementar 1 vez cada ciclo que 1 vez cada 100us. Cuando tmr0 desborde será cuando sumaremos 1.
 inicio
 
-	BSF INTCON,GIE	;Habilitar la interrupción
+	BSF 	INTCON,GIE	;Habilitar la interrupción
 	BSF	INTCON,T0IE	;Habilitar timer0
 
 	;Enable T0CS si queremos usar tiempo. (Bit del option register)
@@ -34,7 +34,7 @@ main
 ;incf para sumar
 int_tmr
 	bcf	INTCON,T0IF		;ponemos a 0 t0if (Flag Interruption Activated)
-	incf ciclo_100us,1	;incrementamos 1 cada vez
+	incf 	ciclo_100us,1	;incrementamos 1 cada vez
 	movlw	.166
 	movwf	TMR0
 retfie
