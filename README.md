@@ -1,1 +1,2 @@
-## Ejemplos con explicaciones de programas en assembly de microchip.
+## Ejemplos con comentarios de programas hechos en assembly de microchip.
+PIC16F876X
